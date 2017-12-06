@@ -1,0 +1,977 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: #ffffff;
+  background: url("../img/code.png") no-repeat center center;
+  background-size: cover;
+}
+
+a {
+  color: #196a74;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-background-wrapper {
+   background: linear-gradient(#f0b23b, #fd8512);
+    background: -webkit-linear-gradient(#f0b23b, #fd8512); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#f0b23b, #fd8512); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#f0b23b, #fd8512); /* For Firefox 3.6 to 15 */
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 4000px;
+  perspective: 4000px;
+}
+
+.cd-floating-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.cd-floating-background.is-absolute {
+  position: absolute;
+}
+.cd-floating-background img {
+  display: block;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* fixes a Firefox bug - images not correctly rendered*/
+  background-color: rgba(255, 255, 255, 0.01);
+}
+.cd-floating-background img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cd-floating-background img:first-child {
+  -webkit-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.cd-floating-background img:nth-child(2) {
+  -webkit-transform: translateZ(290px);
+  -ms-transform: translateZ(290px);
+  transform: translateZ(290px);
+}
+.cd-floating-background img:nth-child(3) {
+  -webkit-transform: translateZ(400px);
+  -ms-transform: translateZ(400px);
+  transform: translateZ(400px);
+}
+.no-preserve-3d .cd-floating-background {
+  /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
+  position: relative;
+}
+
+/*ADD*/
+
+.clear {
+  clear: both;
+}
+
+heading {
+
+}
+
+  heading h2 {
+    text-align: center;
+  }
+
+  heading p {
+    text-align: center;
+  }
+
+#section1 {
+}
+
+  #section1 h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .kv-head {
+    color: #1c1c1c;
+    font-size: 60px;
+    /*font-weight: bold;*/
+    text-align: center;
+    width: 60%;
+    margin: 55px auto;
+    position: relative;
+    display: block;
+    z-index: 99;
+  }
+
+  .pyramid {
+    margin-top: -70px;
+  }
+
+  .kv-bot {
+    background: #182e39;
+    height: 100%;
+    min-height: 290px;
+    display: block;
+    width: 100%;
+    border-bottom:1px #5a6971 solid;
+    padding: 55px 0;
+  }
+
+    .kv-bot heading {
+      color: #fff;
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .kv-bot h1 {
+      font-size: 35px; 
+      font-weight: bold;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .kv-bot span {
+      text-align: center;
+      font-size: 25px;
+      width: 60%;
+      margin: 25px auto;
+      position: relative;
+      display: block;
+    }
+
+    .kv-bot p {
+      width: 60%;
+      display: block;
+      position: relative;
+      margin: 25px auto;
+      line-height: 25px;
+    }
+
+#section2 {
+  background: #182e39;
+  padding: 15% 0 0;
+  width: 100%;
+  border-top: 1px #0f1f27 solid;
+}
+
+  .container {
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+  }
+
+    .container h2 {
+      text-align: center;
+    }
+
+    .container p {
+      text-align: center;
+    }
+
+  .x3 {
+    color: #fff; 
+    padding: 5px;
+    margin: 10px;
+    width: 30%;
+  }
+
+    .x3 h3 {
+       text-align: center;
+       padding: 25px;
+       font-size: 35px;
+    }
+
+    .x3 p {
+      text-align: center;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    .bot-block {
+      background: url(../img/bot-block.jpg) no-repeat center bottom;
+      background-size: cover;
+      display: block;
+      height: 100%;
+      min-height: 300px;
+      width: 100%;
+    }
+
+.analyze {
+  background: url(../img/analyze.png) no-repeat center center;
+  height: 118px;
+  width: 139px;
+  display: block;
+  text-indent: -2000em;
+  overflow: hidden;
+  margin: 10px auto 54px;
+}
+
+.code {
+  background: url(../img/code-icn.png) no-repeat center center;
+  height: 134px;
+  width: 121px;
+  display: block;
+  text-indent: -2000em;
+  overflow: hidden;
+  margin: 10px auto 40px;
+}
+
+.deliver {
+  background: url(../img/deliver.png) no-repeat center center;
+  height: 108px;
+  width: 139px;
+  display: block;
+  text-indent: -2000em;
+  overflow: hidden;
+  margin: 10px auto 65px;
+}
+
+#section3 {
+  padding: 5% 15%;
+  background: #f2eeec;
+  color: #1c1c1c;
+}
+
+  #section3 h2 {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 25px;
+  }
+
+  #section3 p {
+    line-height: 22px;
+    margin: 25px auto 35px;
+  }
+
+  .staff-content {
+    margin: 35px 0;
+    display: block;
+    position: relative;
+  }
+
+  .manager {
+    background: url(../img/manager.png) no-repeat center center;
+    display: block;
+    height: 193px;
+    width: 182px;
+    overflow: hidden;
+    text-indent: -2000em;
+    margin: 10px auto;
+    position: relative;
+  }
+
+    .manager a {
+      width: 182px;
+      height: 193px;
+      display: block;
+    }
+
+  .leaderA {
+    background: url(../img/leadA.png) no-repeat center center;
+    display: block;
+    height: 159px;
+    width: 150px;
+    overflow: hidden;
+    text-indent: -2000em;
+    margin: 25px auto;
+  }
+
+    .leaderA a {
+      width: 150px;
+      height: 159px;
+      display: block;
+    }
+
+  .leaderB {
+    background: url(../img/leadB.png) no-repeat center center;
+    display: block;
+    height: 159px;
+    width: 150px;   
+    overflow: hidden;
+    text-indent: -2000em;
+    margin: 25px auto;
+  }
+
+    .leaderB a {
+      width: 150px;
+      height: 159px;
+      display: block;
+    }
+
+  .staffA {
+    background: url(../img/staffA.png) no-repeat center center;
+    dispaly: block;
+    height: 127px;
+    width: 120px;
+    overflow: hidden;
+    text-indent: -2000em;
+  }
+
+    .staffA a {
+      width: 120px;
+      height: 127px;
+      display: block;
+    }
+
+  .staffB {
+    background: url(../img/staffB.png) no-repeat center center;
+    dispaly: block;
+    height: 127px;
+    width: 120px;
+    overflow: hidden;
+    text-indent: -2000em;
+  }
+
+   .staffB a {
+      width: 120px;
+      height: 127px;
+      display: block;
+    }
+
+  .staffC {
+    background: url(../img/staffC.png) no-repeat center center;
+    dispaly: block;
+    height: 127px;
+    width: 120px;
+    overflow: hidden;
+    text-indent: -2000em;
+  }
+
+    .staffC a {
+      width: 120px;
+      height: 127px;
+      display: block;
+    }
+
+  .staffD {
+    background: url(../img/staffD.png) no-repeat center center;
+    dispaly: block;
+    height: 127px;
+    width: 120px;
+    overflow: hidden;
+    text-indent: -2000em;
+  }
+
+    .staffD a {
+      width: 120px;
+      height: 127px;
+      display: block;
+    }
+
+  .staffE {
+    background: url(../img/staffE.png) no-repeat center center;
+    dispaly: block;
+    height: 127px;
+    width: 120px;
+    overflow: hidden;
+    text-indent: -2000em;
+  }
+
+    .staffE a {
+      width: 120px;
+      height: 127px;
+      display: block;
+    }
+
+  .staffF {
+    background: url(../img/staffF.png) no-repeat center center;
+    display: block;
+    height: 127px;
+    width: 120px;
+    overflow: hidden;
+    text-indent: -2000em;
+  }
+
+   .staffF a {
+      width: 120px;
+      height: 127px;
+      display: block;
+    }
+
+  .blank {
+    background: url(../img/blank.png) no-repeat center center;
+    display: block;
+    height: 127px;
+    width: 120px;
+    overflow: hidden;
+    text-indent: -2000em;
+    margin: 25px auto;
+  }
+
+    .blank a {
+      height: 127px;
+      width: 120px;
+      display: block;
+    }
+
+#section4 {
+  padding: 5% 15%;
+  background: #f2eeec;
+  color: #1c1c1c;
+}
+
+  #section4 h2 {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 25px;
+  }
+
+  #section4 p {
+    line-height: 22px;
+  }
+
+#footer {
+  background: #282828;
+  color: #fff;
+  padding: 5%;
+}
+
+.col {
+    float: left;
+  }
+
+  .staff {
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    display: block;
+  }
+
+.row {
+  margin: 25px auto;
+  width: 100%;
+  max-width: 1024px;
+  min-width: 300px;
+  display: block;
+  clear: both;
+  position: relative;
+  text-align: center;
+}
+
+
+  .line1 {
+    width: 545px;
+  }
+
+  .line2 {
+    width: 420px;
+  }
+
+  .line3 {
+    width: 120px;
+    min-width: 0 !important;
+  }
+
+.info {
+  width: 40%;
+  display: block;
+  margin: 10px auto;
+}
+
+.cta {
+  width: 40%;
+  display: block;
+  margin: 35px auto;
+}
+
+.banana-inquire {
+  background: url(../img/contact.png) no-repeat 60px 18px;
+  width: 300px;
+  height: 80px;
+  display: block;
+  text-indent: 48px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 4px;
+  border: 5px #000 solid;
+  text-align: center;
+  padding: 23px 15px;
+  margin: 55px auto;
+}
+
+.banana-pic {
+  background: url(../img/banana.png) no-repeat center center;
+  height: 85px;
+  width: 162px;
+  overflow: hidden;
+  text-indent: -2000em;
+  position: relative;
+  margin: 25px auto;
+}
+
+.tblogo {
+  background: url(../img/tblogo.png) no-repeat center center;
+  height: 56px;
+  width: 207px;
+  display: block;
+  overflow: hidden;
+  text-indent: -2000em;
+  float: left;
+  border-right: 1px #202020 solid;
+  padding: 0 25px;
+}
+
+.company-address {
+  float: left;
+  border-left: 1px #797979 solid;
+  height: 56px;
+  width: 600px;
+  display: block;
+  padding: 0 25px;
+
+}
+
+  .company-address p {
+    line-height: 24px;
+  }
+
+.top {
+  display: block;
+  position: relative;
+  right: -89%;
+  width: 50px;
+  text-align: center;
+}
+
+  .top a {
+    font-size: 16px;
+    color: #fff;
+    padding: 10px;
+    transition: 0.3s;
+  }
+
+  .top a:hover {
+    color: #E8A317;
+    transition: 0.3s;
+  }
+
+
+.adish {
+  background: url(../img/adishlogo.png) no-repeat center center;
+  height: 56px;
+  width: 157px;
+  display: block;
+  float: left;
+}
+
+.adish-add {
+  float: left;
+  width: 320px;
+  line-height: 24px;
+  display: block;
+  margin-left: 20px;
+}
+
+/* RESPONSIVE */
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .kv-bot heading {
+    width: 100%;
+  }
+
+  .pyramid {
+    margin-top: -34px;
+  }
+
+  #section3 {
+    padding: 15% 0;
+  }
+
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+
+  .cta {
+    width: 100%;
+  }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+   .pyramid {
+    margin-top: -34px;
+  }
+
+
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .kv-head {
+    width: 80%;
+  }
+
+  .kv-bot p {
+    width: 80%;
+  }
+
+  .pyramid {
+    margin-top: -34px;
+  }
+
+  .container {
+    padding: 5%;
+  }
+
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .pyramid {
+    margin-top: -50px;
+  }
+
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .line1 {
+    width: 76%;
+  }
+
+  .line2 {
+    width: 59%;
+  }
+
+  .line3 {
+    width: 21%;
+  }
+
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1024px) {
+    .pyramid {
+      margin-top: -44px;
+    }
+
+    #section2 {
+      padding: 15% 5% 10%;
+    }
+
+    .line1 {
+      width: 542px;
+    }
+
+    .line2 {
+      width: 420px;
+    }
+
+    .line3 {
+      width: 20%;
+    }
+
+    .info {
+      width: 65%;
+    }
+
+    .cta {
+      width: 55%;
+    }
+  }
+
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .pyramid {
+    margin-top: -50px;
+  }
+
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px)  { 
+   .pyramid {
+    margin-top: -46px;
+  }
+
+  .line1 {
+    width: 542px;
+  }
+
+  .line2 {
+    width: 420px;
+  }
+
+  .line3 {
+    width: 16%;
+  }
+}
+
+@media screen
+  and (min-device-width: 600px;)
+  and (max-device-wdith: 800px;) {
+
+  }
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
+
+/* POPUP MODAL */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 45%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 50%;
+  padding: 3%;
+  overflow: auto;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
