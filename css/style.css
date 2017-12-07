@@ -722,7 +722,7 @@ heading {
   and (-webkit-min-device-pixel-ratio: 2) {
 
   .kv-head {
-    width: 80%;
+    width: 800px;
   }
 
   .kv-bot p {
@@ -738,15 +738,24 @@ heading {
   }
 
   .line1 {
-    width: 76%;
+    width: 542px;
   }
 
   .line2 {
-    width: 59%;
+    width: 420px;
   }
 
   .line3 {
     width: 21%;
+  }
+
+  .tblogo {
+    border: none;
+    margin-bottom: 25px;
+  }
+
+  .company-address {
+    border: none;
   }
 
 }
@@ -904,8 +913,30 @@ heading {
 @media screen
   and (min-device-width: 600px;)
   and (max-device-wdith: 800px;) {
-
+    
   }
+
+@media screen
+  and (min-device-width: 800px)
+  and (max-device-width: 1024px;) {
+    
+    .line1 {
+      width: 542px;
+    }
+
+    .line2 {
+      width: 420px;
+    }
+
+    .tblogo {
+      border: 0;
+    }
+
+    .company-address {
+      border: 0;
+    }
+  }
+
 
 /* ----------- Retina Screens ----------- */
 @media screen 
